@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "imu_alert",
+  "version": "0.0.1",
+  "description": "alert when a website accesses the IMU",
+
+  "author": "quentin delamare",
+
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["http://*/*", "https://*/*"],
+    "run_at": "document_start"
+  }],
+
+  "permissions": [ "http://*/*", "https://*/*", "webNavigation" ]
+}
